@@ -1,0 +1,283 @@
+Cmp-Mod V01 Created by PcbNew   date = Wed 06 Jan 2016 04:40:53 PM MST
+
+BeginCmp
+TimeStamp = 5671A3E4
+Path = /5668C4CD
+Reference = U4;
+ValeurCmp = FTCO3V455A1;
+IdModule  = bldc:FTCO3V455A1;
+EndCmp
+
+BeginCmp
+TimeStamp = 568C6C12
+Path = /568C7767
+Reference = Css1;
+ValeurCmp = 4700pF;
+IdModule  = Capacitors_SMD:C_0402;
+EndCmp
+
+BeginCmp
+TimeStamp = 56719103
+Path = /56682905
+Reference = CDVDD1;
+ValeurCmp = 1.0uF 16V;
+IdModule  = Capacitors_SMD:C_0402;
+EndCmp
+
+BeginCmp
+TimeStamp = 567190F0
+Path = /56682960
+Reference = CAVDD1;
+ValeurCmp = 1.0uF 6.3V;
+IdModule  = Capacitors_SMD:C_0402;
+EndCmp
+
+BeginCmp
+TimeStamp = 567190F7
+Path = /566ED989
+Reference = CCW;
+ValeurCmp =  ;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x03;
+EndCmp
+
+BeginCmp
+TimeStamp = 56719118
+Path = /566829B2
+Reference = CP1;
+ValeurCmp = 0.047uF 16V;
+IdModule  = Capacitors_SMD:C_0402;
+EndCmp
+
+BeginCmp
+TimeStamp = 56719124
+Path = /56682A89
+Reference = CP2;
+ValeurCmp = 0.047uF 16V;
+IdModule  = Capacitors_SMD:C_0402;
+EndCmp
+
+BeginCmp
+TimeStamp = 56719130
+Path = /566834B3
+Reference = CPVDD;
+ValeurCmp = 4.7uF 50V;
+IdModule  = Capacitors_SMD:C_1206;
+EndCmp
+
+BeginCmp
+TimeStamp = 5671913C
+Path = /566835EA
+Reference = CVCPH;
+ValeurCmp = 2.2uF 16V;
+IdModule  = Capacitors_SMD:C_1206;
+EndCmp
+
+BeginCmp
+TimeStamp = 56719148
+Path = /566831FC
+Reference = CVREG1;
+ValeurCmp = 1.0uF 6.3V;
+IdModule  = Capacitors_SMD:C_0402;
+EndCmp
+
+BeginCmp
+TimeStamp = 5671914F
+Path = /566ED9E6
+Reference = CW;
+ValeurCmp =  ;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x03;
+EndCmp
+
+BeginCmp
+TimeStamp = 56719157
+Path = /566EE16A
+Reference = D;
+ValeurCmp =  ;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x04;
+EndCmp
+
+BeginCmp
+TimeStamp = 5671915E
+Path = /566EE7D6
+Reference = ESTOP;
+ValeurCmp =  ;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x03;
+EndCmp
+
+BeginCmp
+TimeStamp = 56719167
+Path = /566EDD32
+Reference = H;
+ValeurCmp =  ;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x05;
+EndCmp
+
+BeginCmp
+TimeStamp = 56719185
+Path = /566EDA47
+Reference = Q;
+ValeurCmp =  ;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x04;
+EndCmp
+
+BeginCmp
+TimeStamp = 567191A9
+Path = /566A28D4
+Reference = R3;
+ValeurCmp = 4.7K ;
+IdModule  = Resistors_SMD:R_0402;
+EndCmp
+
+BeginCmp
+TimeStamp = 567191BB
+Path = /56718C50
+Reference = U1;
+ValeurCmp = SN65HVD23X;
+IdModule  = Housings_SOIC:SOIJ-8_5.3x5.3mm_Pitch1.27mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 567191EF
+Path = /566E9ACF
+Reference = U2;
+ValeurCmp = STM32F042C6;
+IdModule  = bldc:QFP48_7x7;
+EndCmp
+
+BeginCmp
+TimeStamp = 56719241
+Path = /56682563
+Reference = U3;
+ValeurCmp = DRV8305;
+IdModule  = bldc:PQFP48_7x7;
+EndCmp
+
+BeginCmp
+TimeStamp = 5673DDB4
+Path = /567427C3
+Reference = CAN;
+ValeurCmp =  ;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x02;
+EndCmp
+
+BeginCmp
+TimeStamp = 5673DDBA
+Path = /566A365F
+Reference = CBULK1;
+ValeurCmp = 470uF;
+IdModule  = Capacitors_ThroughHole:C_Radial_D12.5_L25_P5;
+EndCmp
+
+BeginCmp
+TimeStamp = 5673DDC0
+Path = /566A36F2
+Reference = CBULK2;
+ValeurCmp = 470uF;
+IdModule  = Capacitors_ThroughHole:C_Radial_D12.5_L25_P5;
+EndCmp
+
+BeginCmp
+TimeStamp = 5673DDC6
+Path = /56682995
+Reference = CCPV_LSD1;
+ValeurCmp = 1.0uF 16V;
+IdModule  = Capacitors_SMD:C_0402;
+EndCmp
+
+BeginCmp
+TimeStamp = 5673DDDA
+Path = /5674145F
+Reference = R1;
+ValeurCmp = 4.7K ;
+IdModule  = Resistors_SMD:R_0402;
+EndCmp
+
+BeginCmp
+TimeStamp = 5673DDE4
+Path = /566ED067
+Reference = SW1;
+ValeurCmp = SW_PUSH;
+IdModule  = Buttons_Switches_SMD:SW_SPST_FSMSM;
+EndCmp
+
+BeginCmp
+TimeStamp = 5673E085
+Path = /566EC6AD
+Reference = HSE1;
+ValeurCmp = 8MHz;
+IdModule  = bldc:CSTCE_V13C;
+EndCmp
+
+BeginCmp
+TimeStamp = 567C043D
+Path = /567B5EF0
+Reference = U;
+ValeurCmp =  ;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x03;
+EndCmp
+
+BeginCmp
+TimeStamp = 568C6BEE
+Path = /568C711D
+Reference = Cff1;
+ValeurCmp = 0.022uF;
+IdModule  = Capacitors_SMD:C_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = 568C6BFA
+Path = /568C8641
+Reference = Cin1;
+ValeurCmp = 10uF;
+IdModule  = Capacitors_SMD:C_1206;
+EndCmp
+
+BeginCmp
+TimeStamp = 568C6C06
+Path = /568C8EE9
+Reference = Cout1;
+ValeurCmp = 100uF;
+IdModule  = Capacitors_SMD:C_1206;
+EndCmp
+
+BeginCmp
+TimeStamp = 568C6C18
+Path = /568C5EB8
+Reference = Rfbb1;
+ValeurCmp = 6.49k;
+IdModule  = Resistors_SMD:R_0402;
+EndCmp
+
+BeginCmp
+TimeStamp = 568C6C1E
+Path = /568C5A94
+Reference = Rfbt1;
+ValeurCmp = 34k;
+IdModule  = Resistors_SMD:R_0402;
+EndCmp
+
+BeginCmp
+TimeStamp = 568C6C24
+Path = /568C5C8B
+Reference = Ron1;
+ValeurCmp = 100k;
+IdModule  = Resistors_SMD:R_0402;
+EndCmp
+
+BeginCmp
+TimeStamp = 568D8E3A
+Path = /56748224
+Reference = SYN;
+ValeurCmp =  ;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x03;
+EndCmp
+
+BeginCmp
+TimeStamp = 568C6C30
+Path = /568C4C35
+Reference = U5;
+ValeurCmp = LMZ14201H;
+IdModule  = bldc:NDW0007A;
+EndCmp
+
+EndListe

@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP DRV8305
+D Three Phase Gate Driver With Current Shunt Amplifiers and Voltage Regulator
+K 3-phase
+$ENDCMP
+#
+#End Doc Library

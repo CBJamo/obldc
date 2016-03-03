@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP STM32F042C6
+D 32-bit ARM Cortex-M0 Microcontroller, 48MHz, 16KB Flash, 4KB RAM, RTC, VQFP48
+K STM32 ARM Cortex-M0 MCU
+F http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/DM00052629.pdf
+$ENDCMP
+#
+#End Doc Library
