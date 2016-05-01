@@ -28,7 +28,13 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f0xx.h"
 #include "stm32f0xx_conf.h"
+#include "uart.h"
+#include "stops.h"
+#include "hall.h"
+#include "drv8305.h"
+#include <stdbool.h>
 
+#include "printf.h"
 /** @addtogroup STM32F0_Discovery_Peripheral_Examples
   * @{
   */
@@ -39,21 +45,24 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
-#define BSRR_VAL        0x0300
 
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
-GPIO_InitTypeDef        GPIO_InitStructure;
 
 /* Private function prototypes -----------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
+
+void uart_printf( void* p, char c )
+{
+  uart_putch( c );
+}
 
 /**
   * @brief  Main program.
   * @param  None
   * @retval None
   */
-int main(void)
+int main( void )
 {
   /*!< At this stage the microcontroller clock setting is already configured,
        this is done through SystemInit() function which is called from startup
@@ -61,76 +70,29 @@ int main(void)
        To reconfigure the default setting of SystemInit() function, refer to
        system_stm32f0xx.c file
      */
+  init_uart1( 9600 );
+  init_printf( 0, uart_printf );
 
-  /* GPIOC Periph clock enable */
-  RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOC, ENABLE);
+  //init_hall();
 
-  /* Configure PC8 and PC9 in output pushpull mode */
-  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8 | GPIO_Pin_9;
-  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
-  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
-  GPIO_Init(GPIOC, &GPIO_InitStructure);
+  init_spi();
 
-  /* To achieve GPIO toggling maximum frequency, the following  sequence is mandatory.
-     You can monitor PC8 and PC9 on the scope to measure the output signal.
-     If you need to fine tune this frequency, you can add more GPIO set/reset
-     cycles to minimize more the infinite loop timing.
-     This code needs to be compiled with high speed optimization option.  */
-  while (1)
+  init_stop_irq();
+  printf("Init\r\n");
+
+
+  while( 1 )
   {
-    /* Set PC8 and PC9 */
-    GPIOC->BSRR = BSRR_VAL;
-    /* Reset PC8 and PC9 */
-    GPIOC->BRR = BSRR_VAL;
-
-    /* Set PC8 and PC9 */
-    GPIOC->BSRR = BSRR_VAL;
-    /* Reset PC8 and PC9 */
-    GPIOC->BRR = BSRR_VAL;
-
-    /* Set PC8 and PC9 */
-    GPIOC->BSRR = BSRR_VAL;
-    /* Reset PC8 and PC9 */
-    GPIOC->BRR = BSRR_VAL;
-
-    /* Set PC8 and PC9 */
-    GPIOC->BSRR = BSRR_VAL;
-    /* Reset PC8 and PC9 */
-    GPIOC->BRR = BSRR_VAL;
-
-    /* Set PC8 and PC9 */
-    GPIOC->BSRR = BSRR_VAL;
-    /* Reset PC8 and PC9 */
-    GPIOC->BRR = BSRR_VAL;
-
-    /* Set PC8 and PC9 */
-    GPIOC->BSRR = BSRR_VAL;
-    /* Reset PC8 and PC9 */
-    GPIOC->BRR = BSRR_VAL;
-
-    /* Set PC8 and PC9 */
-    GPIOC->BSRR = BSRR_VAL;
-    /* Reset PC8 and PC9 */
-    GPIOC->BRR = BSRR_VAL;
-
-    /* Set PC8 and PC9 */
-    GPIOC->BSRR = BSRR_VAL;
-    /* Reset PC8 and PC9 */
-    GPIOC->BRR = BSRR_VAL;
-
-    /* Set PC8 and PC9 */
-    GPIOC->BSRR = BSRR_VAL;
-    /* Reset PC8 and PC9 */
-    GPIOC->BRR = BSRR_VAL;
-
-    /* Set PC8 and PC9 */
-    GPIOC->BSRR = BSRR_VAL;
-    /* Reset PC8 and PC9 */
-    GPIOC->BRR = BSRR_VAL;
+//    SPISend( 0xAAAA );
+//    while( SPI_I2S_GetFlagStatus( SPI1, SPI_I2S_FLAG_RXNE ) == RESET );
+    printf("Ret: %x\r\n", SPISend( 0xA800 ) );
   }
+
+
+  return 0;
 }
+
+
 
 #ifdef  USE_FULL_ASSERT
 
