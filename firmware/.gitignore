@@ -4,5 +4,5 @@
 *.hex
 *.lst
 *.map
-
+*.o
 
